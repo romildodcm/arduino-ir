@@ -1,29 +1,27 @@
 /*******************************************************************
- * CONNECTIONS
- *  check 
- * 
- * 
- * 
- * 
+ * Electrical scheme:
+ * Complete project on GitHub:
  * Author: Romildo C Marques
- * E-mail: romildodcm@gmail.com
 ********************************************************************/
 
-//#define SENSOR1 A1
-const int phototransistor = A0, n = 10;
 
-// Most recent: 0
-// Oldest: N-1
-int sensorMeasurements[n];
+const int phototransistor = A0, // Phototransistor analog input pin
+          n = 10;   // Number of samples for moving average filter
 
-int cont = 0, measurement, filteredMeasurement;
-long measurementsSum = 0;
+// Vector/array of samples for moving average filter
+int sensorMeasurements[n]; 
+
+
+int measurement,          // The measurement ¯\_(ツ)_/¯ 
+    filteredMeasurement;  // The filtered measurement ¯\_(ツ)_/¯ 
+long measurementsSum = 0; // Sum of samples for moving average filter
 
 void setup()
 {
-    Serial.begin(9600);
-    pinMode(phototransistor, INPUT);
+    Serial.begin(9600); // Begin the serial
+    pinMode(phototransistor, INPUT); // Sensor input setup
 
+    // Output with the CSV header 
     Serial.print("Time");
     Serial.print(",");
     Serial.print("Measurement");
@@ -52,6 +50,7 @@ void loop()
     filteredMeasurement = measurementsSum / n;
     measurementsSum = 0;
 
+    // Data output
     Serial.print(millis());
     Serial.print(",");
     Serial.print(measurement);

@@ -16,14 +16,18 @@ In Figure 1, from the left to the right, it's possible to see that the signal do
 
 ![](./img/parallel_all.jpg)
 
-
-### Anotações dos teste
-
-
-FUNCIONOU BEM E com diferença de aproximadamente 100 bits entre o sinal com ir e com o ir interrompido, isso com 200mm de distância entre o emissor e o receptor, se diminuir a distânica, aquele valor de diferença que é de 100 bits só vai aumentando.
-
 ## REFERENCES
 
 [1] Como usar com Arduino – Led Emissor IR e Fototransistor IR <https://blogmasterwalkershop.com.br/arduino/como-usar-com-arduino-led-emissor-ir-e-fototransistor-ir/>
-
 [2] Arduino + Filtros: Média Móvel <https://youtu.be/AEsAxho1Y-Y>
+
+
+
+
+
+
+
+
+### Anotações dos teste
+
+FUNCIONOU BEM E com diferença de aproximadamente 100 bits entre o sinal com ir e com o ir interrompido, isso com 200mm de distância entre o emissor e o receptor, se diminuir a distânica, aquele valor de diferença que é de 100 bits só vai aumentando.
