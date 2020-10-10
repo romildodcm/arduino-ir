@@ -1,20 +1,15 @@
 /*******************************************************************
- * Electrical scheme:
- * Complete project on GitHub:
+ * Electrical scheme: https://github.com/romildodcm/arduino-ir/blob/main/electrical_scheme/circuit.png
+ * Complete project on GitHub: https://github.com/romildodcm/arduino-ir
  * Author: Romildo C Marques
 ********************************************************************/
 
-
 const int phototransistor = A0, // Phototransistor analog input pin
-          n = 10;   // Number of samples for moving average filter
-
-// Vector/array of samples for moving average filter
-int sensorMeasurements[n]; 
-
-
-int measurement,          // The measurement ¯\_(ツ)_/¯ 
-    filteredMeasurement;  // The filtered measurement ¯\_(ツ)_/¯ 
-long measurementsSum = 0; // Sum of samples for moving average filter
+          n = 10;               // Samples for moving average filter (MA filter)
+int sensorMeasurements[n];      // Vector/array of samples for MA filter
+int measurement,                // The measurement ¯\_(ツ)_/¯ 
+    filteredMeasurement;        // The filtered measurement ¯\_(ツ)_/¯
+long measurementsSum = 0;       // Sum of samples for MA filter
 
 void setup()
 {

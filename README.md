@@ -7,7 +7,7 @@
 
 ![Alt Text](./img/parallel.jpg)
 
-With the infrared LED beside the phototransistor we can, for example, detect colors by the difference between the absorption/reflection of infrared, another application is with an array of these pairs to make a line follower for robots. In the following graph, it's possible to see the difference in the signal received by varying colors/materials in front of the emitter and receiver with the [code for analog read and moving average filter](./ir_filtered).
+With the infrared LED beside the phototransistor we can, for example, detect colors by the difference between the absorption/reflection of infrared, another application is with an array of these pairs to make a line follower for robots. In the following graph, it's possible to see the difference in the signal received by varying colors/materials in front of the emitter and receiver with the [code for analog read and moving average filter](./codes/ir_filtered).
 
 Figure 1 - Difference in the signal received by varying colors/materials.
 ![Figure 1 - Difference in the signal received by varying colors/materials](./data_samples/parallel_ir_filtered_graph.png)
