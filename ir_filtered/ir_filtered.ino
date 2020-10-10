@@ -17,7 +17,6 @@ const int phototransistor = A0, n = 10;
 int sensorMeasurements[n];
 
 int cont = 0, measurement, filteredMeasurement;
-float time;
 long measurementsSum = 0;
 
 void setup()
@@ -29,7 +28,7 @@ void setup()
     Serial.print(",");
     Serial.print("Measurement");
     Serial.print(",");
-    Serial.println("Filtered Measurement");
+    Serial.println("Filtered_Measurement");
 }
 
 void loop()
@@ -53,14 +52,9 @@ void loop()
     filteredMeasurement = measurementsSum / n;
     measurementsSum = 0;
 
-    // Print the output every 100 milliseconds
-    if (abs(millis() - time) > 100)
-    {
-        Serial.print(millis());
-        Serial.print(",");
-        Serial.print(measurement);
-        Serial.print(",");
-        Serial.println(filteredMeasurement);
-        time = millis();
-    }
+    Serial.print(millis());
+    Serial.print(",");
+    Serial.print(measurement);
+    Serial.print(",");
+    Serial.println(filteredMeasurement);
 }
