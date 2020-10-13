@@ -98,6 +98,7 @@ In development...
 
 ### A Digital Implementation
 In development...
+Encoder
 
 ## REFERENCES
 
